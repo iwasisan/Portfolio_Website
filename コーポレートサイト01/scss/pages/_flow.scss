@@ -1,0 +1,535 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.flow_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.flow_fv img{
+  @include com.fv_com;
+}
+
+.flow_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+  padding:30px 65px;
+}
+
+//--ページ内リンク部分----------------------------  --
+
+.pagelink_01{
+  @include com.btn_sty2;
+}
+
+.pagelink_02{
+  @include com.btn_sty2;
+}
+
+.flow_pagelink{
+  @include com.btn_sty2_set;
+  margin-bottom: 90px;
+}
+
+//--パワコン修理の流れ部分----------------------------  --
+
+.power_flow h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.p_f1_illust{
+  @include com.flow_img;
+  p:nth-child(2){
+    transform: translateY(-10px);
+  }
+}
+
+.p_f1_nam{
+  transform: translateY(5px);
+  p:nth-child(1){
+    @include com.flow_text01;
+    transform: translateY(15px);
+  }
+  p:nth-child(2){
+    @include com.flow_text02;
+  }
+}
+
+.p_f2_illust{
+  @extend .p_f1_illust;
+}
+
+.p_f2_nam{
+  @extend .p_f1_nam;
+}
+
+.p_f3_illust{
+  @extend .p_f1_illust;
+}
+
+.p_f3_nam{
+  @extend .p_f1_nam;
+}
+
+.p_f4_illust{
+  @extend .p_f1_illust;
+  img{
+    width: 97px;
+  }
+  p:nth-child(1){
+    transform: translateY(12px);
+  }
+  p:nth-child(2){
+    transform: translateY(2px);
+  }
+}
+
+.p_f4_nam{
+  @extend .p_f1_nam;
+  transform: translateY(5px);
+}
+
+.p_f5_illust{
+  @extend .p_f1_illust;
+  img{
+    width: 97px;
+  }
+  p:nth-child(1){
+    transform: translateY(12px);
+  }
+  p:nth-child(2){
+    transform: translateY(2px);
+  }
+}
+
+.p_f5_nam{
+  @extend .p_f1_nam;
+  transform: translateY(5px);
+}
+
+.p_f6_illust{
+  @extend .p_f1_illust;
+}
+
+.p_f6_nam{
+  @extend .p_f1_nam;
+}
+
+.p_flow_icon1,.p_flow_icon2,
+.p_flow_icon3,.p_flow_icon4,
+.p_flow_icon5{
+  font-size: 1.1rem;
+}
+
+
+.po_flowmap{
+  white-space: nowrap;
+  @include com.flow_back;
+}
+
+.p_flow01{
+  @include com.flow_waku;
+}
+
+.p_flow02{
+  @include com.flow_waku;
+}
+
+.p_flow03{
+  @include com.flow_waku;
+}
+
+.p_flow04{
+  @include com.flow_waku;
+}
+
+.p_flow05{
+  @include com.flow_waku;
+  padding: 10px 15px 25px;
+}
+
+.p_flow06{
+  @include com.flow_waku;
+}
+
+.power_flow{
+  margin-bottom: 100px;
+}
+
+
+.po_det01_text{
+  white-space: nowrap;
+  @include com.flow_flex;
+  @include com.flow_dt_dd;
+  max-width: 910px;
+  margin: 0 auto 12px;
+
+  hgroup{
+    @include com.flow_hgroup;
+    text-align: center;
+  }
+  .po_text01{
+    @include com.flow_po_text;
+  }
+}
+
+.po_det01_icon{
+  @include com.flow_icon;
+}
+
+.po_det02_text{
+  @extend .po_det01_text;
+}
+
+.po_text02{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.po_det02_icon{
+  @include com.flow_icon;
+}
+
+.po_det03_text{
+  @extend .po_det01_text;
+}
+
+.po_text03{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.po_det03_icon{
+  @include com.flow_icon;
+}
+
+.po_det04_text{
+  @extend .po_det01_text;
+  dd{
+    position: relative;
+    bottom: 12px;
+  }
+}
+
+.po_text04{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+  text-align: center;
+}
+
+.po_det04_icon{
+  @include com.flow_icon;
+}
+
+.po_det05_text{
+  @extend .po_det01_text;
+}
+
+.po_text05{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.po_det05_icon{
+  @include com.flow_icon;
+}
+
+.po_det06_text{
+  @extend .po_det01_text;
+  dd{
+    position: relative;
+    bottom: 12px;
+  }
+}
+
+.po_text06{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.po_det01_text{
+  position: relative;
+
+  &::before{
+    @include com.double_underline01;
+    width:calc(100% + 15px);
+    top:93px;
+  }
+
+  &::after{
+    @include com.double_underline02;
+    width:calc(100% + 15px);
+    height:2px;
+    bottom:-3px;
+  }
+}
+
+.po_f_det02{
+  transform: translateY(-30px);
+}
+
+.po_f_det03{
+  transform: translateY(-60px);
+}
+
+.po_f_det04{
+  transform: translateY(-75px);
+}
+
+.po_f_det05{
+  transform: translateY(-95px);
+}
+
+.po_f_det06{
+  transform: translateY(-110px);
+}
+
+
+//--メンテナンスの流れ部分----------------------------  --
+
+
+.mainte_flow h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.m_f1_illust{
+  @extend .p_f1_illust;
+}
+
+.m_f1_nam{
+  @extend .p_f1_nam;
+  transform: translateY(10px);
+}
+
+.m_f2_illust{
+  @extend .p_f1_illust;
+  p:nth-child(1){
+    transform: translateY(12px);
+  }
+  p:nth-child(2){
+    transform: translateY(2px);
+  }
+}
+
+.m_f2_nam{
+  @extend .p_f1_nam;
+}
+
+.m_f3_illust{
+  @extend .p_f1_illust;
+}
+
+.m_f3_nam{
+  @extend .p_f1_nam;
+  transform: translateY(8px);
+}
+
+.m_f4_illust{
+  @extend .m_f2_illust;
+}
+
+.m_f4_nam{
+  @extend .p_f1_nam;
+}
+
+.m_f5_illust{
+  @extend .m_f2_illust;
+}
+
+.m_f5_nam{
+  @extend .p_f1_nam;
+}
+
+.m_f6_illust{
+  @extend .m_f2_illust;
+}
+
+.m_f6_nam{
+  @extend .p_f1_nam;
+}
+
+.m_flow_icon1,.m_flow_icon2,
+.m_flow_icon3,.m_flow_icon4,
+.m_flow_icon5{
+  font-size: 1.1rem;
+}
+
+.ma_flowmap{
+  white-space: nowrap;
+  @include com.flow_back;
+}
+
+.m_flow01{
+  @include com.flow_waku;
+  padding: 31px 7px;
+}
+
+.m_flow02{
+  @include com.flow_waku;
+}
+
+.m_flow03{
+  @extend .m_flow01;
+}
+
+.m_flow04{
+  @include com.flow_waku;
+}
+
+.m_flow05{
+  @include com.flow_waku;
+}
+
+.m_flow06{
+  @include com.flow_waku;
+}
+
+.mainte_flow{
+  margin-bottom: 100px;
+}
+
+.ma_det01_text{
+  @extend .po_det01_text;
+  .ma_text01{
+    @include com.flow_po_text;
+  }
+}
+
+.ma_det01_icon{
+  @include com.flow_icon;
+}
+
+.ma_det02_text{
+  @extend .po_det01_text;
+  dd{
+    position: relative;
+    bottom: 5px;
+  }
+}
+
+.ma_text02{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.ma_det02_icon{
+  @include com.flow_icon;
+}
+
+.ma_det03_text{
+  @extend .po_det01_text;
+  dd{
+    position: relative;
+    bottom: -5px;
+  }
+}
+
+.ma_text03{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.ma_det03_icon{
+  @include com.flow_icon;
+}
+
+.ma_det04_text{
+  @extend .po_det01_text;
+  dd{
+    position: relative;
+    bottom: 5px;
+  }
+}
+
+.ma_text04{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.ma_det04_icon{
+  @include com.flow_icon;
+}
+
+.ma_det05_text{
+  @extend .po_det01_text;
+    dd{
+      position: relative;
+      bottom: 5px;
+    }
+}
+
+.ma_text05{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.ma_det05_icon{
+  @include com.flow_icon;
+}
+
+.ma_det06_text{
+  @extend .po_det01_text;
+    dd{
+      position: relative;
+      bottom: 28px;
+    }
+}
+
+.ma_text06{
+  @include com.flow_po_text;
+  transform: translateY(8px);
+}
+
+.ma_det06_icon{
+  @include com.flow_icon;
+}
+
+.ma_det06_text{
+  position: relative;
+
+  &::after{
+    @include com.double_underline02;
+    width:calc(100% + 15px);
+    height:2px;
+    bottom:23px;
+  }
+}
+
+.ma_det01_icon,.ma_det02_icon,
+.ma_det03_icon,.ma_det04_icon,
+.ma_det05_icon{
+  transform: translateY(5px);
+}
+
+.ma_f_det02{
+  transform: translateY(-20px);
+}
+
+.ma_f_det03{
+  transform: translateY(-45px);
+}
+
+.ma_f_det04{
+  transform: translateY(-60px);
+}
+
+.ma_f_det05{
+  transform: translateY(-75px);
+}
+
+.ma_f_det06{
+  transform: translateY(-70px);
+}

@@ -1,0 +1,278 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.maintenans_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.maint_fv img{
+  @include com.fv_com;
+}
+
+.maintenans_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  @include com.fv_style;
+}
+
+//--必要な理由セクション部分----------------------------  --
+
+.need_maint{
+  margin-bottom: 80px;
+  text-align: center;
+  h2{
+    @include com.font_h2;
+    color: sys.$btn_color3;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    width: 320px;
+    margin: 0 auto;
+    transform: translateY(16px);
+  }
+  p{
+    @include com.font;
+    font-size: 0.78rem;
+    text-align: left;
+    display: inline-block;
+    padding: 25px 30px 19px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #006DB8, 0 0 0 5px #ffffff, 0 0 0 6px #006DB8;
+  }
+}
+
+
+//--ノーメンテナンスのリスクセクション部分----------------------------  --
+
+.no_maint {
+  margin-bottom: 80px;
+}
+
+
+.no_maint h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.lisk_1{
+  div{
+    h3{
+      @include com.font_h3;
+      color: sys.$font_color4;
+      font-size: 2rem;
+    }
+    p{
+      @include com.font_h3;
+      color: sys.$font_color4;
+      font-size: 1.2rem;
+    }
+  }
+  dl{
+    dt{
+      @include com.font_h2;
+    }
+    dd{
+      @include com.font;
+      font-weight: 500;
+    }
+  }
+}
+
+.lisk_1{
+  @include com.flex;
+  align-items: flex-start;
+  column-gap: 70px;
+  div{
+    position: relative;
+    text-align: center;
+    transform: translateX(10px);
+
+    &::after{
+      @include com.side_line01;
+      background-color:sys.$font_color4;
+      top: 2px;
+      right:-32px;
+      height:80px;
+    }
+  }
+  dl{
+    transform: translateY(5px);
+    
+    dt{
+      margin-bottom: 3px;
+    }
+    dd{
+      line-height: 1.6;
+    }
+  }
+}
+
+.lisk_1{
+  padding: 15px 15px;
+  box-shadow: 0 0 0 3px sys.$waku_color1, 0 0 0 8px #fff, 0 0 0 9px sys.$waku_color2;
+}
+
+.lisk_2{
+  @extend .lisk_1;
+}
+
+.lisk_3{
+  @extend .lisk_1;
+}
+
+.lisk_4{
+  @extend .lisk_1;
+}
+
+.no_maint_lisk{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  @include com.grid_center;
+}
+
+//--xxxxxxxxxのパワコンメンテナンスセクション----------------------------  --
+
+.power_maint h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.power_text{
+  text-align: center;
+  margin-bottom: 30px;
+  p{
+    @include com.font;
+    font-weight: 500;
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+.p_p_1{
+  @include com.flex;
+  column-gap: 120px;
+  background-color: sys.$waku_color3;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 15px 0px 15px 10px;
+  border-radius: 3px;
+  h3{
+    @include com.font_h2;
+    font-size: 1.45rem;
+    color: sys.$btn_color2;
+    transform: translateX(20px);
+  }
+  p{
+    @include com.font;
+    font-weight: 800;
+    font-size: 1.0rem;
+    color: sys.$btn_color2;
+  }
+}
+
+.p_p_2{
+  @extend .p_p_1;
+}
+
+.p_p_3{
+  @extend .p_p_1;
+}
+
+.power_maint{
+  margin-bottom: 70px;
+}
+
+//--お見積りリンク部分--------------------  --
+
+.Quotation{
+  background-image: url("../img/photoAC/3128345_m.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px 0px;
+  background-position: 0px -285px;
+  background-color: rgba(#fff, 0.5);
+  background-blend-mode: screen;
+  margin-bottom: 70px;
+}
+
+.Quotation h2{
+  @include com.font_title;
+  font-size: 1.4em;
+  transform: translateX(-145px);
+  margin-bottom: 30px;
+  &::after{
+    @include com.under_line_title;
+    left: calc(50% + 125px);
+    width:500px;
+    background-color:sys.$font_color3;
+  }
+}
+
+.Quo_text{
+  text-align: center;
+  margin-bottom: 20px;
+  p{
+    @include com.font;
+    font-weight: 600;
+    font-size: 0.9rem;
+    @include com.font_left_style;
+    transform: translateX(-50px);
+  }
+}
+
+.Quo_tel{
+  p{
+    @include com.font;
+    font-weight: 600;
+    text-align: center;
+  }
+  nav{
+    @include com.flex;
+    column-gap: 10px;
+    img{
+      max-width: 50px;
+      border-radius: 50%;
+    }
+    p{
+      @include com.font;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.Quo_link a{
+  @include com.font;
+  font-size: 0.8rem;
+  @include com.btn_color;
+  font-weight: 600;
+  @include com.btn_size;
+  background-color: sys.$btn_color2;
+  max-width: fit-content;
+  transform: translateY(10px);
+  box-shadow: 3px 3px #bbbbbb;
+}
+
+
+.Quo_form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 80px;
+  transform: translateX(-20px);
+}
+
+
+

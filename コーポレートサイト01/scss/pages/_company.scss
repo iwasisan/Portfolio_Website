@@ -1,0 +1,235 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.company_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.company_fv img{
+  @include com.fv_com;
+}
+
+.company_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+  padding:50px 165px;
+}
+
+//--弊社の想い部分----------------------------  --
+
+.com_mind h2{
+  @include com.font_h2;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::after{
+    @include com.under_line_title2;
+  }
+}
+
+.com_mind_text{
+  p{
+    @include com.font;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  p:nth-child(1){
+    margin-bottom: 20px;
+  }
+  p:nth-child(2){
+    margin-bottom: 30px;
+  }
+  p:nth-child(3){
+    margin-bottom: 20px;
+  }
+}
+
+.com_img{
+  transform: translateY(35px);
+  img{
+    max-width: 320px;
+  }
+}
+
+.com_mind{
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  margin-bottom: 40px;
+}
+
+//--会社概要部分----------------------------  --
+
+.com_overview h2{
+  @include com.font_h2;
+  @include com.under_line_title4;
+}
+
+.com_view1{
+  @include com.font;
+  font-weight: 500;
+  @include com.flex;
+  column-gap: 25%;
+  @include com.style_2;
+  position: relative;
+  &::after{
+    @include com.under_line_title3;
+  }
+}
+
+.com_view2{
+  @extend .com_view1;
+}
+.com_view3{
+  @extend .com_view1;
+  column-gap: calc(24% - 2px);
+}
+
+.com_view4{
+  @extend .com_view1;
+  column-gap: calc(24% - 2px);
+}
+
+.com_view5{
+  @extend .com_view1;
+  column-gap: calc(26% + 3px);
+}
+
+.com_view6{
+  @extend .com_view1;
+}
+
+.com_view7{
+  @extend .com_view1;
+}
+
+.com_view8{
+  @extend .com_view1;
+  column-gap: calc(24% - 2px);
+}
+
+.com_view9{
+  @extend .com_view1;
+  column-gap: calc(23% - 5px);
+}
+
+.com_view10{
+  @extend .com_view1;
+  column-gap: calc(24% - 2px);
+}
+
+.com_overview{
+  margin-bottom: 100px;
+  h2{
+    margin-bottom: 50px;
+  }
+}
+
+
+//--アクセスマップ部分----------------------------  --
+
+.access h2{
+  @include com.font_h2;
+  @include com.under_line_title4;
+  margin-bottom: 30px;
+}
+
+.acc_add01{
+  max-width: 550px;
+  @include com.font_h2;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  transform: translateY(20px);
+  dt{
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+  dd{
+    letter-spacing: 1.5px;
+  }
+}
+
+.acc_add02{
+  @extend .acc_add01;
+  transform: translateY(40px);
+}
+
+.acc_detail_02{
+  transform: translateY(-15px);
+  iframe{
+    transform: translateX(80px);
+  }
+}
+
+.acc_detail{
+  display: flex;
+  @include com.style_2;
+  max-width: 1000px;
+  justify-content: space-between;
+  transform: translateX(20px);
+}
+
+
+.acc_add01 dd{
+  p:nth-child(3){
+    position: relative;
+
+    &::before{
+    @include com.double_underline01;
+    }
+
+    &::after{
+      @include com.double_underline02;
+    }
+  }
+}
+
+.acc_add02 dd{
+  position: relative;
+  
+  &::before{
+    @include com.double_underline01;
+    top:89px;
+  }
+
+  &::after{
+      @include com.double_underline02;
+    }
+}
+
+.access{
+  margin-bottom: 85px;
+}
+
+//--バナー部分----------------------------  --
+
+
+.banner img{
+  width: 320px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.banner ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @include com.grid_center;
+  gap: 15px;
+  width: 1100px;
+  transform: translateX(calc(6% + 5px));
+}
+
+.banner{
+  margin-bottom: 40px;
+}
+
+

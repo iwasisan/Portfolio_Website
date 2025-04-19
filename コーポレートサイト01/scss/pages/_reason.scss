@@ -1,0 +1,191 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+@use "../object/js_common" as js;
+
+//--FV部分----------------------------  --
+.reason_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.rea_fv img{
+  @include com.fv_com;
+}
+
+.reason_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+}
+
+//--事業内容部分----------------------------  --
+
+.work h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.work_01{
+  img{
+    max-width: 350px;
+    aspect-ratio: 14 / 9;
+    object-fit: cover;
+  }
+  .w_01_text{
+    h3{
+      @include com.font_h3;
+      color: sys.$font_color1;
+    }
+    p{
+      @include com.font;
+    }
+  }
+}
+
+.work_02{
+  @extend .work_01;
+
+  .w_02_text{
+    @extend .w_01_text;
+  }
+}
+
+.work_03{
+  @extend .work_01;
+
+  .w_03_text{
+    @extend .w_01_text;
+  }
+}
+
+.w_01_text{
+  @include com.rea_style;
+  margin: 0 auto;
+  h3{
+    text-align: center;
+  }
+  p{
+    max-width: 245px;
+    padding: 15px 20px;
+  }
+}
+
+.work_select{
+  display: flex;
+  justify-content: center;
+  column-gap: 2px;
+  margin-bottom: 50px;
+}
+
+//--取り扱い機器一例部分----------------------------  --
+
+.equipment h2{
+  @include com.font_title;
+  margin-bottom: 50px;
+  &::after{
+    @include com.under_line_title;
+  }
+}
+
+.slide{
+  display: inline-block;
+  img{
+    max-width: 200px;
+    aspect-ratio: 14 / 9;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  p{
+    @include com.font_h2;
+  }
+}
+
+.slider{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dots-class button {
+    display: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.dots-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dots-class li {
+    width: 45px;
+    height: 10px;
+    background-color: #D9D9D9;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.dots-class li.slick-active {
+    background-color: #006DB8;
+}
+
+.dots-class li:hover {
+    background-color: #006DB8;
+}
+
+.inner{
+  margin-bottom: 90px;
+}
+
+
+.equi_01{
+  div{
+    img{
+    @include com.rea_style2;
+    }
+  p{
+    @include com.font_h2;
+    color: sys.$btn_color2;
+    text-decoration: underline;
+    }
+  }
+  a{
+    text-decoration: none;
+    @include com.btn_sty1;
+    background-color: sys.$btn_color2;
+    padding: 3px 7px;
+    border-radius: 5px;
+  }
+}
+
+.equi_02{
+  @extend .equi_01;
+}
+
+.equi_03{
+  @extend .equi_01;
+}
+
+.equi_04{
+  @extend .equi_01;
+}
+
+.equipment_detail nav{
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+  text-align: center;
+}
+
+.equipment_detail{
+  margin-bottom: 100px;
+}

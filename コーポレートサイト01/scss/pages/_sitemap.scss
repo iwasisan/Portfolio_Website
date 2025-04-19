@@ -1,0 +1,46 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.map_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.map_fv img{
+  @include com.fv_com;
+}
+
+.map_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+  padding:40px 145px;
+}
+
+//--各ページへのリンク部分----------------------------  --
+
+.page_link{
+  max-width: 900px;
+  margin: 0 auto 100px;
+  line-height: 2.5;
+}
+
+.page_link a{
+  @include com.font_h2;
+  color: sys.$btn_color4;
+}
+
+
+
+
+
+
+
+
+
+
+

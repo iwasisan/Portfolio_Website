@@ -1,0 +1,47 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--最新記事・サイドバーｌタイトル；部分----------------------------
+
+.jou_title h1{
+  @include com.font_h2;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::after{
+    @include com.under_line_title2;
+  }
+}
+
+.jou_title p{
+  @include com.font_h2;
+  
+  a{
+    color: sys.$font_color1;
+  }
+  :hover{
+    color: sys.$btn_color3;
+    text-decoration: underline;
+  }
+}
+
+.jou_title nav{
+  display: flex;
+  column-gap: 20px;
+
+  p:nth-child(1){
+      position: relative;
+
+      &::after{
+        @include com.side_line;
+      }
+    }
+}
+
+.jou_title{
+  display: flex;
+  justify-content: space-between
+}
+
+
+

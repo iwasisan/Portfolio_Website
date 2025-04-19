@@ -1,0 +1,146 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.privacy_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.priv_fv img{
+  @include com.fv_com;
+}
+
+.privacy_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+  padding:60px 65px;
+}
+
+
+//--プライバシーポリシーについての考え方部分----------------------------  --
+
+.priv_mind h2{
+  @include com.under_line_title5;
+}
+
+.priv_mind p{
+  @include com.font;
+  margin: 0 auto 15px;
+  max-width: 980px;
+}
+
+.mind_item{
+  @include com.privacy_nam;
+}
+
+.priv_mind{
+  margin-bottom: 80px;
+}
+
+//--適正な取得部分----------------------------  --
+
+.priv_suit h2{
+  @include com.under_line_title5;
+}
+
+.priv_suit ul{
+  @include com.privacy_nam;
+  transform: translateX(0px);
+  li{
+    list-style: none;
+  }
+}
+
+.priv_suit{
+  margin-bottom: 80px;
+}
+
+//--第三者への提供部分----------------------------  --
+
+.third_party h2{
+  @include com.under_line_title5;
+}
+
+.third_party p{
+  @include com.font;
+  margin: 0 auto 15px;
+  max-width: 980px;
+}
+
+.third_items{
+  @include com.privacy_nam;
+}
+
+.third_party{
+  margin-bottom: 80px;
+}
+
+//--安全管理部分----------------------------  --
+
+.safety h2{
+  @include com.under_line_title5;
+}
+
+.safety p{
+  @include com.font;
+  margin: 0 auto 15px;
+  max-width: 980px;
+}
+
+.safety{
+  margin-bottom: 80px;
+}
+
+//--個人を特定しない属性情報・行動履歴の取得および利用について部分----------------------------  --
+
+.personal h2{
+  @include com.under_line_title5;
+}
+
+.personal p{
+  @include com.font;
+  margin: 0 auto;
+  max-width: 980px;
+  line-height: 1.9;
+}
+
+.personal div{
+  margin-bottom: 5px;
+}
+
+.personal{
+  margin-bottom: 80px;
+}
+
+//--その他部分----------------------------  --
+
+.others h2{
+  @include com.under_line_title5;
+}
+
+.others p{
+  @include com.font;
+  margin: 0 auto 15px;
+  max-width: 980px;
+
+  &:nth-child(2){
+    margin-bottom: 55px;
+  }
+}
+
+.president{
+  text-align: right;
+  margin: 0 auto 15px;
+  max-width: 980px;
+  transform: translateX(-50px);
+}
+
+.others{
+  margin-bottom: 50px;
+}
+

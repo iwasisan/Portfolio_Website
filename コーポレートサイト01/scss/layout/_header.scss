@@ -1,0 +1,61 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+
+header{
+  @include com.flex;
+  column-gap: 60px;
+  justify-content: center;
+  padding: 0 20px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.logo{
+  img{
+    max-width: 90px;
+  }
+}
+
+.main_navi{
+  @include com.flex;
+  column-gap: 30px;
+  a{
+    color: sys.$font_color1;
+    font-family:sys.$font_fami;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.sub_navi{
+  @include com.flex;
+  column-gap: 30px;
+}
+
+.header_navi{
+  @include com.flex;
+  column-gap: 80px;
+}
+
+.joural_link{
+  img{
+    max-width: 70px;
+  }
+  p{
+    @include com.font;
+    font-weight: 800;
+    transform: translate(-10px,-23px);
+  }
+}
+
+.contact_link{
+  @extend .joural_link;
+  transform: translateY(-2px);
+  img{
+    max-width: 50px;
+  }
+  p{
+    transform: translate(-3px,-12px);
+  }
+}

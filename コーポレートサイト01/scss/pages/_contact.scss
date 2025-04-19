@@ -1,0 +1,289 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--FV部分----------------------------  --
+
+.contact_top{
+  @include com.fv_base;
+  margin-bottom: 40px;
+}
+
+.contact_fv img{
+  @include com.fv_com;
+}
+
+.contact_top h1{
+  @include com.font;
+  @include com.fv_sub;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  @include com.fv_style;
+  padding:40px 145px;
+}
+
+//--フォーム部分----------------------------  --
+
+.name_title{
+  p{
+    @include com.font_h2;
+  }
+  p:nth-child(1){
+    @include com.form_part1;
+  }
+}
+
+.name_title{
+  display: flex;
+  column-gap: 10px;
+}
+
+.name_inp label{
+  @include com.font_h2;
+}
+
+.name_inp input{
+  @include com.form_part2;
+}
+
+.name_inp{
+  display: flex;
+  column-gap: 30px;
+}
+
+.fo_name{
+  @include com.form_part3;
+  position: relative;
+
+  &::after{
+    @include com.under_line_title3;
+  }
+  margin-bottom: 50px;
+}
+
+
+//--メールアドレス部分----------------------------  --
+
+.mail_title{
+  p{
+    @include com.font_h2;
+  }
+  p:nth-child(1){
+    @include com.form_part1;
+  }
+}
+
+.mail_title{
+  display: flex;
+  column-gap: 10px;
+}
+
+.fo_mail_01 input{
+  @include com.form_part2;
+  width: 100%;
+}
+
+.fo_mail_01{
+  white-space: nowrap;
+  @include com.form_part3;
+  column-gap: 90px;
+  margin: 0 auto 20px;
+}
+
+.fo_mail_02 input{
+  @include com.form_part2;
+  width: 100%;
+}
+
+.fo_mail_02{
+  white-space: nowrap;
+  @include com.form_part3;
+  column-gap: 26px;
+}
+
+.fo_mail{
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+
+
+  &::after{
+    @include com.under_line_title3;
+    left: 45px;
+  }
+  margin-bottom: 50px;
+}
+
+
+//--電話番号部分----------------------------  --
+
+.tel_title{
+  p{
+    @include com.font_h2;
+  }
+  p:nth-child(1){
+    @include com.form_part1;
+  }
+}
+
+.tel_title{
+  display: flex;
+  column-gap: 10px;
+}
+
+.fo_tel input{
+  @include com.form_part2;
+  width: 100%;
+}
+
+.fo_tel{
+  white-space: nowrap;
+  @include com.form_part3;
+  column-gap: 138px;
+  margin-bottom: 50px;
+}
+
+.fo_tel{
+  @extend .fo_mail;
+  &::after{
+    @include com.under_line_title3;
+    left: -5px;
+  }
+}
+
+//--会社・組織名----------------------------  --
+
+.comp_title{
+  @extend .tel_title;
+  p:nth-child(1){
+    @include com.btn_color3;
+  }
+}
+
+.fo_comp input{
+  @include com.form_part2;
+  width: 100%;
+}
+
+.fo_comp{
+  @extend .fo_tel;
+  column-gap: 90px;
+}
+
+//--お問い合わせ項目----------------------------  --
+
+.cont_title{
+  @extend .tel_title;
+}
+
+.fo_cont{
+  @include com.flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  column-gap: 80px;
+  transform: translateX(50px);
+}
+
+.cont_value{
+  @include com.font_h2;
+  transform: translateX(-30px);
+  input{
+    margin-left: 30px;
+  }
+}
+
+.fo_cont{
+  margin-bottom: 50px;
+  position: relative;
+
+  &::after{
+    @include com.under_line_title3;
+    left: -5px;
+  }
+}
+
+//--お問い合わせ内容----------------------------  --
+
+.note_title{
+  @extend .tel_title;
+  p:nth-child(1){
+    @include com.btn_color3;
+  }
+}
+
+.fo_note{
+  @extend .fo_cont;
+  white-space: nowrap;
+  textarea{
+    width: 75%;
+  }
+}
+
+//--個人情報の取り扱い規程----------------------------  --
+
+.per_title{
+  @extend .tel_title;
+}
+
+.per_check{
+  @include com.font_h2;
+  transform: translateX(-15px);
+  p{
+    transform: translateY(-65px);
+    @include com.font;
+    a{
+      text-decoration: underline;
+      color: sys.$font_color2;
+    }
+  }
+}
+
+.fo_per{
+  @extend .fo_cont;
+  align-items: flex-start;
+  white-space: nowrap;
+  max-height: 55px;
+  margin-bottom: 70px;
+}
+
+//--送信する--------------------  --
+
+.submitbtn{
+  text-align: center;
+  margin-bottom: 100px;
+  input{
+    @include com.font_h2;
+    @include com.form_part1;
+    font-size: 1.3rem;
+    border: 0px;
+    padding: 10px 55px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+input,textarea{
+  transition: all 0.3s;
+}
+
+input:focus,textarea:focus{
+  border: 1px solid sys.$waku_color1;
+  background-clip: padding-box;
+	outline: none;
+}
+
+.cont_value input{
+  accent-color: #138CDF;
+}
+
+.personal {
+  accent-color: #138CDF;
+}
+
+
+
+
+
+
+
+
+

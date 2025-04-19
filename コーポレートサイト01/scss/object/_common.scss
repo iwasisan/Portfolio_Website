@@ -1,0 +1,542 @@
+@use "../foundation/system" as sys;
+
+
+@mixin font{
+    color: sys.$font_color1;
+    font-family:sys.$font_fami;
+    font-size: 0.8rem;
+}
+
+@mixin font_h2{
+    color: sys.$font_color1;
+    font-family:sys.$font_fami;
+    font-weight: 800;
+}
+
+@mixin font_h3{
+    color: sys.$font_color2;
+    font-family:sys.$font_fami;
+    font-weight: 800;
+    font-size: 1.0rem;
+}
+
+@mixin font_size{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+@mixin font_title{
+  @include font_h2;
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+@mixin font_left_style{
+  text-align: left;
+  display: inline-block;
+}
+
+
+@mixin flex{
+  display: flex;
+  align-items: center;
+}
+
+@mixin mente_img{
+  width: 100%;
+  max-width: 450px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+@mixin mente_btn{
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 10px;
+}
+
+@mixin flow_img{
+  width: 100%;
+  max-width: 270px;
+  max-height: 230px;
+  object-fit: cover;
+}
+
+@mixin img_com{
+  width: 100%;
+  object-fit: cover;
+  max-width: 300px;
+  aspect-ratio: 3 / 2;
+}
+
+@mixin btn_sty1{
+  @include font;
+  font-weight: 600;
+  background-color: sys.$btn_color3;
+  color: sys.$font_color3;
+}
+
+@mixin btn_sty2{
+  a{
+    @include font_h2;
+    color: sys.$btn_color4;
+    font-size: 1.1rem;
+  }
+  background-color: sys.$waku_color5;
+  max-width: fit-content;
+  padding: 15px 65px;
+  border-radius: 5px;
+  box-shadow: 2px 2px #cccccc;
+}
+
+@mixin btn_sty2_set{
+  @include flex;
+  column-gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@mixin btn_color{
+  background-color: sys.$btn_color1;
+  color: sys.$font_color3;
+}
+
+@mixin btn_color2{
+  background-color: sys.$btn_color2;
+  color: sys.$font_color3;
+}
+
+@mixin btn_color3{
+  background-color: sys.$btn_color5;
+  color: sys.$font_color3;
+}
+
+@mixin under_line{
+  content:"";
+  display:block;
+  width:640px;
+  height:2px;
+  background-color:sys.$btn_color1;
+  position:absolute;
+  bottom:-5px;
+}
+
+@mixin side_line01{
+  content:"";
+  display:inline-block;
+  width:1px;
+  height:23px;
+  background-color:#0097A7;
+  position:absolute;
+  right:-22px;
+}
+
+@mixin under_line_title{
+  content:"";
+  display:block;
+  width:350px;
+  height:2px;
+  background-color:sys.$btn_color1;
+  position:absolute;
+  bottom:-3px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+@mixin under_line_title2{
+    content:"";
+    display:block;
+    width:485px;
+    height:2px;
+    background-color:sys.$btn_color1;
+    position:absolute;
+    bottom:2px;
+    left:-5px;
+}
+
+@mixin under_line_title3{
+    content:"";
+    display:block;
+    width:calc(100% + 100px);
+    height:1px;
+    background-color:sys.$btn_color1;
+    position:absolute;
+    bottom:-25px;
+    left:-5px;
+}
+
+@mixin under_line_title4{
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 950px;
+  margin: 0 auto 40px;
+
+  &::after{
+    @include under_line_title2;
+  }
+}
+
+@mixin under_line_title5{
+  @include font;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  margin: 0 auto 30px;
+  max-width: 950px;
+
+  &::after{
+    @include under_line_title2;
+    width:calc(80% + 35px);
+    bottom:0px;
+    left:-15px;
+  }
+}
+
+@mixin side_line{
+  content:"";
+  display:inline-block;
+  width:1px;
+  height:24px;
+  background-color:sys.$font_color1;
+  position:absolute;
+  top:1px;
+  right:-11px;
+}
+
+@mixin btn_size{
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 3px #cccccc;
+}
+
+@mixin fv_com{
+  width: 100vw;
+  height: 420px;
+  object-fit: cover;
+}
+
+@mixin fv_base{
+  position: relative;
+  margin-bottom: 20px;
+}
+
+@mixin fv_sub{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  color: sys.$font_color3;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+@mixin fv_style{
+  background-color: rgba(14, 16, 76, 0.35);
+  padding:20px 35px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px rgba(7, 8, 41, 0.5);
+  text-shadow: 3px 3px 2px rgba(7, 8, 41, 0.5);
+  white-space: nowrap;
+}
+
+@mixin rea_style{
+  max-width: 265px;
+  height: 210px;
+  padding: 15px 0px;
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-30px);
+  border-radius: 5px 5px 0 0;
+  border-bottom: solid 1px #4295DE;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+@mixin rea_style2{
+  max-width: 200px;
+  aspect-ratio: 14 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@mixin style_2{
+  max-width: 950px;
+  margin: 0 auto 50px;
+}
+
+
+@mixin double_underline01{
+  content:"";
+  display:block;
+  width:calc(100% + 305px);
+  height:17px;
+  background-color:sys.$waku_color3;
+  position:absolute;
+  top:34px;
+  left:0px;
+}
+
+@mixin double_underline02{
+  content:"";
+  display:block;
+  width:calc(100% + 305px);
+  height:1.5px;
+  background-color:sys.$waku_color4;
+  position:absolute;
+  bottom:-24px;
+  left:0px;
+}
+
+@mixin grid_center{
+  gap: 45px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin flow_img{
+  img{
+    width: 120px;
+  }
+  p{
+    @include font_h2;
+    font-size: 0.95rem;
+  }
+}
+
+@mixin flow_text01{
+  @include font_h3;
+    color: sys.$font_color5;
+    font-size: 2.5rem;
+}
+
+@mixin flow_text02{
+  @include font_h3;
+    color: sys.$font_color5;
+    font-size: 1.0rem;
+}
+
+@mixin flow_waku{
+  background-color: sys.$font_color3;
+  padding: 10px 8px 25px;
+  border-bottom: solid 10px sys.$waku_color6;
+}
+
+@mixin flow_back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 10px;
+  background-color: sys.$back_color2;
+  padding: 55px 0px;
+}
+
+@mixin flow_hgroup{
+  z-index: 1;
+  h3{
+      @include flow_text01;
+      font-size: 3.1rem;
+      transform: translateY(18px);
+    }
+    p{
+      @include flow_text02;
+      font-size: 1.0rem;
+    }
+}
+
+@mixin flow_dt_dd{
+  dt{
+    display: flex;
+    align-items: baseline;
+    column-gap: 40px;
+    flex: 1;
+  }
+  dd{
+    @include font_h2;
+    font-weight: 600;
+    color: sys.$waku_color6;
+    flex: 2;
+    font-size: 0.9rem;
+    text-align: left;
+    transform: translateX(30px);
+  }
+}
+
+@mixin flow_flex{
+  display: flex;
+  align-items: baseline;
+  column-gap: 0px;
+  justify-content: space-between;
+}
+
+@mixin flow_icon{
+  text-align: center;
+  font-size: 2.0rem;
+  color: sys.$font_color5;
+}
+
+@mixin flow_po_text{
+  @include font_h2;
+    font-size: 1.1rem;
+    color: sys.$waku_color6;
+}
+
+@mixin privacy_nam{
+  margin: 0 auto 10px;
+  max-width: 980px;
+  transform: translateX(17px);
+  li{
+    @include font;
+    margin-bottom: 12px;
+    list-style: decimal-leading;
+  }
+}
+
+
+@mixin QA_text{
+  @include font_h2;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@mixin QA_acc{
+  height: 70px;
+  border: 1px solid sys.$font_color1;
+  background-color: sys.$QA_color1;
+  color: sys.$font_color1;
+  text-align: left;
+  line-height: 70px;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+@mixin QA_hide{
+  @include QA_acc;
+  height: calc(25% + 1px);
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+@mixin QA_option_line1{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  width: 22px;
+  height: 1px;
+  background: sys.$font_color1;
+  transform: translateY(-50%);
+}
+
+@mixin QA_option_line2{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 46px;
+  width: 1px;
+  height: 22px;
+  background: sys.$font_color1;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+@mixin form_part1{
+  @include btn_color;
+    display: inline-block;
+    padding: 0px 9px;
+    box-shadow: 1px 1px 2px rgba(7, 8, 41, 0.5);
+}
+
+@mixin form_part2{
+  background: #FFFFFF;
+  border: solid 0.5px #c2c2c2;
+  height: 40px;
+}
+
+@mixin form_part3{
+  @include flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  column-gap: 150px;
+  transform: translateX(50px);
+}
+
+@mixin jou_text{
+  font-size: 1rem;
+  font-weight: 600;
+  color: sys.$btn_color1;
+  text-decoration: underline;
+}
+
+
+@mixin sea_waku{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid sys.$SA_color2;
+  border-radius: 3px;
+  max-width: 220px;
+  max-height: 25px;
+}
+
+@mixin sea_inp{
+  width: 190px;
+  height: 45px;
+  padding: 5px 15px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1em;
+  outline: none;
+}
+
+@mixin sea_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  border-right: 2px solid sys.$SA_color2;
+  background-color: #ffffff;
+  background-blend-mode: multiply;
+  cursor: pointer;
+}
+
+
+@mixin jou_side_head{
+  @include font;
+  @include btn_color2;
+  display: inline-block;
+  padding: 2px 71.5px;
+  border-radius: 5px 5px 0px 0;
+}
+
+
+@mixin jou_side_btn{
+  @include font_h2;
+  font-size: 0.9rem;
+  background-color:sys.$SA_color4;
+  color: sys.$btn_color2;
+  padding: 10px 30px;
+}
+
+@mixin jou_side_text{
+  @include font_h2;
+  font-size: 0.9rem;
+  color: sys.$SA_color3;
+}
+
+@mixin jou_side_text2{
+  border: solid 1px sys.$SA_color2;
+  border-top: 0px;
+  max-width: max-content;
+}
+
+@mixin jou_news{
+  @include btn_sty1;
+  padding: 5px 15px;
+  display: inline-block;
+}

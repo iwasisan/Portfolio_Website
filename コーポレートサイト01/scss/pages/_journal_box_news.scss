@@ -1,0 +1,93 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+//--最新記事部分----------------------------  --
+
+.newJou_sideber_01{
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.news_01 h2{
+  @include com.font_h2;
+  font-size: 1.2rem;
+  position: relative;
+  margin-bottom: 10px;
+
+  &::after{
+    @include com.under_line_title2;
+    width:100%;
+  }
+}
+
+.cate_blc{
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 10px;
+  p:nth-child(1){
+    @include com.jou_news;
+  }
+  p:nth-child(2){
+    @include com.jou_news;
+    background-color: sys.$back_color3;
+    color: sys.$font_color1;
+  }
+}
+
+.news_bjyu{
+  margin-bottom: 15px;
+  img{
+    max-width: 570px;
+    aspect-ratio: 16 / 9;
+  }
+  p:nth-child(2){
+    @include com.font;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+
+    &::after{
+      @include com.under_line_title2;
+      width:100%;
+      bottom:-12px;
+    }
+  }
+}
+
+.news_date > p{
+  @include com.font;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.twitter{
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 10px;
+  transform: translate(-5px , 5px);
+
+  a{
+    @include com.jou_news;
+    background-color: sys.$back_color3;
+    color: sys.$font_color1;
+  }
+}
+
+.news_date{
+  display: flex;
+  justify-content: space-between;
+}
+
+.news_01{
+  box-shadow: 0 0 0 3px sys.$waku_color2, 0 0 0 8px #fff, 0 0 0 9px sys.$waku_color2;
+  margin-bottom: 150px;
+  padding: 10px 20px;
+  transform: translateY(10px);
+}
+
+
+
+
+
+

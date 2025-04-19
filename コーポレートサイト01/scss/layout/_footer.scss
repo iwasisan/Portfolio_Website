@@ -1,0 +1,93 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+footer{
+  border-top: solid 1px #CCCCCC;
+  padding-top: 7px;
+}
+
+.footer_logo{
+  margin-bottom: 5px;
+  text-align: center;
+  transform: translateX(-400px);
+  img{
+    max-width: 90px;
+  }
+}
+
+.footer_link{
+  position: relative;
+  a{
+    @include com.font;
+    @include com.font_size;
+  }
+  &::before{
+    position: absolute;
+    content: "◆";
+    top: 2px;
+    left: -20px;
+    color: sys.$btn_color2;
+  }
+}
+
+.footer_contact{
+  a{
+    @include com.font;
+    font-weight: 600;
+    font-size: 0.9rem;
+    @include com.btn_color2;
+    padding: 5px 25px;
+    border-radius: 5px;
+  }
+}
+
+footer ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer_nav{
+  background-color: sys.$back_color1;
+  padding: 40px 0;
+}
+
+.copyright_link{
+  display: flex;
+  column-gap: 40px;
+  transform: translateX(-20px);
+  a{
+    @include com.font;
+    @include com.font_size;
+    color: sys.$font_color3;
+  }
+  p:nth-child(1){
+    position: relative;
+    &::after{
+      @include com.side_line01;
+      background-color:sys.$font_color3;
+    }
+  }
+}
+
+.copyright div{
+  @include com.font;
+  @include com.font_size;
+  color: sys.$font_color3;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  column-gap: 330px;
+  background-color: sys.$btn_color2;
+  padding: 3px 0;
+}
+
+
+
+
+

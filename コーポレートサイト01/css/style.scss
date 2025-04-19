@@ -1,0 +1,36 @@
+// -------------初期設定-------------
+@use "../scss/foundation/base" ;
+@use "../scss/foundation/system" ;
+
+// -------------レイアウト(共通)-------------
+
+@use "../scss/layout/header" ;
+@use "../scss/layout/footer" ;
+
+
+// -------------レイアウト(ページ毎)-------------
+
+@use "../scss/pages/top" ;
+@use "../scss/pages/reason" ;
+@use "../scss/pages/maintenans" ;
+@use "../scss/pages/company" ;
+@use "../scss/pages/flow" ;
+@use "../scss/pages/privacy" ;
+@use "../scss/pages/faq" ;
+@use "../scss/pages/sitemap" ;
+@use "../scss/pages/contact" ;
+@use "../scss/pages/journal" ;
+@use "../scss/pages/journal_box" ;
+@use "../scss/pages/journal_box_news" ;
+
+
+
+// -------------共通パーツ-------------
+
+@use "../scss/object/common" ;
+@use "../scss/object/js_common" ;
+
+
+// -------------サイドバー等-------------
+
+@use "../scss/personal_parts/sideber" ;
