@@ -1,0 +1,17 @@
+// -------------初期設定-------------
+@use "./foundation/base";
+@use "./foundation/system";
+
+// -------------レイアウト(共通)-------------
+@use "./layout/header";
+@use "./layout/footer";
+
+// -------------レイアウト(ページ毎)-------------
+@use "./pages/top";
+
+// -------------共通パーツ-------------
+@use "./object/common";
+@use "./object/respon";
+// -------------カルーセル等-------------
+@use "./personal_parts/swiper";
+@use "./personal_parts/hamberger";

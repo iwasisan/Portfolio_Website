@@ -1,0 +1,61 @@
+@use "../foundation/system" as sys;
+@use "../personal_parts/hamberger";
+
+.na_le_01,
+.na_le_02,
+.na_le_03,
+.na_le_04,
+.na_ri_01,
+.na_ri_02 {
+  img {
+    width: 60px;
+    transition: all 0.5s;
+  }
+  p {
+    color: sys.$font_color1;
+    font-size: 0.9rem;
+    transition: all 0.5s;
+  }
+  a {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.navi_left,
+.navi_right {
+  display: flex;
+  column-gap: 30px;
+}
+
+.header_navi {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3%;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 960px) {
+  .header_navi {
+    img {
+      width: 55px;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header_navi {
+    opacity: 0;
+    visibility: hidden;
+  }
+  // ハンバーガーメニューのレスポンシブ
+  .nav-wrapper {
+    display: block;
+    transition: all 0.5s;
+    opacity: 1;
+  }
+}

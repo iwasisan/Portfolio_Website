@@ -1,0 +1,411 @@
+@use "../pages/top";
+@use "../foundation/system" as sys;
+
+// FV部分
+
+@media screen and (max-width: 960px) {
+  .swiper-container h1 {
+    font-size: 3.6rem;
+  }
+  .swiper--wrapper {
+    max-width: 700px;
+  }
+  .swiper-slide img {
+    max-width: 600px;
+    max-height: 480px;
+    object-fit: cover;
+    overflow: hidden;
+    transform: translateY(-100px);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .swiper-container h1 {
+    font-size: 2.4rem;
+    transform: translate(-50%, -100%);
+  }
+  .swiper--wrapper {
+    max-width: 600px;
+  }
+  .swiper-slide img {
+    max-height: 430px;
+  }
+  .swiper-container {
+    margin-bottom: 0px;
+    transform: translateY(-150px);
+  }
+}
+
+// ニュース部分
+
+@media screen and (max-width: 960px) {
+  .news {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 40px;
+    transform: translate(20px, -60px);
+  }
+  .news-title{
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+  .news-text {
+    li:nth-child(1){
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 1rem;
+    }
+    br {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .news{
+    position: relative;
+    top: 60px;
+  }
+  .news-title{
+    font-size: 1.3rem;
+  }
+  .news-text a{
+    font-size: 0.9rem;
+  }
+}
+
+
+
+// トピックス
+
+@media screen and (max-width: 961px) {
+  .topic_01_text,
+  .topic_02_text {
+    h2 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 0.8rem;
+      transform: translateX(calc(45% - 147px));
+    }
+  }
+  .topic_02 > p {
+    font-size: 0.9rem;
+    transform: translate(6%, -110px);
+  }
+  .topic_01_text h2{
+    position: relative;
+    bottom: 20px;
+  }
+  .topic_01_text p{
+    position: relative;
+    bottom: 10px;
+  }
+  .topic_02_text h2{
+    position: relative;
+    bottom: 50px;
+  }
+  .topic_02_text p{
+    position: relative;
+    bottom: 50px;
+  }
+  .pararalx1 {
+    height: 220px;
+    max-width: 55%;
+  }
+  .topic_01 {
+    margin-bottom: 12%;
+  }
+  .pararalx2 {
+    height: 220px;
+    transform: translate(66%, -110%);
+  }
+  .topic{
+    transform: translateY(-80px);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .topic{
+    transform: translateY(-20px);
+  }
+  .pararalx1 {
+    height: 200px;
+    max-width: 100%;
+  }
+  .topic_01_text {
+    transform: translate(33%, -110%);
+
+    h2 {
+      transform: translateX(-28%);
+      background-color: rgba(128, 128, 128, 0.5);
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 300px;
+      color: sys.$font_color4;
+      text-shadow: 1px 2px 3px #ffffff;
+    }
+  }
+
+  .pararalx2 {
+    height: 200px;
+    max-width: 100%;
+    transform: translate(0%, -100%);
+  }
+  .topic_02{
+    transform: translateY(-100px);
+  }
+  .topic_02_text {
+    transform: translate(0%, 25%);
+    h2 {
+      transform: translateX(28%);
+      background-color: rgba(128, 128, 128, 0.5);
+      padding: 15px 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: center;
+      color: sys.$font_color4;
+      text-shadow: 1px 2px 3px #ffffff;
+    }
+    p {
+      transform: translateX(70%);
+    }
+  }
+  .topic_02 > p {
+    transform: translate(18%, -28px);
+    text-shadow: 1px 2px 3px #ffffff;
+  }
+  .topic_02 {
+    margin-bottom: 20px;
+  }
+  .pararalx3 {
+    height: 200px;
+    transform: translateY(-100px);
+  }
+}
+
+// CAMPAIGN
+
+@media screen and (max-width: 961px) {
+  .cakes {
+    transform: translateY(-70px);
+    hgroup {
+      width: 100%;
+      p{
+        transform: translateX(7%);
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .main_cake{
+    position: relative;
+    top: 10px;
+    dd{
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .cakes {
+    transform: translateY(-17%);
+    hgroup {
+      p {
+        transform: translateX(0%);
+        font-size: 0.8rem;
+        white-space: normal;
+        max-width: 400px;
+        margin: 0 auto;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  .pararalx4 {
+    height: 600px;
+  }
+  .main_cake {
+    transform: translate(-30px,10%);
+    dt {
+      font-size: 1.3rem;
+      transform: translateX(10%);
+      margin-bottom: 20px;
+    }
+    dd {
+      white-space: normal;
+      max-width: 500px;
+      transform: translateX(10%);
+      br {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// ニューヨークケーキ
+// フードなどのリンクなど
+
+@media screen and (max-width: 961px) {
+  .food{
+    transform: translateY(-70px);
+    margin-bottom: 50px;
+  }
+  .food_text01 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    transform: translateX(0%);
+    max-height: 150px;
+    margin: 0 auto 30px;
+
+    img {
+      aspect-ratio: 16 / 5;
+      height: 300px;
+    }
+    hgroup {
+      display: flex;
+      flex-flow: column;
+      transform: translate(10%,-25%);
+
+      .food_br{
+        display: none;
+      }
+      p{
+        transform: translateY(-10px);
+      }
+      h2{
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .food_text02 {
+    display: flex;
+    flex-flow: column;
+    max-height: none;
+    align-items: center;
+    padding: 20px 0 60px 0;
+    img {
+      aspect-ratio: 16 / 7;
+      height: 300px;
+    }
+    hgroup {
+      display: flex;
+      flex-flow: column;
+      color: sys.$font_color1;
+      position: relative;
+      bottom: 295px;
+      left: 200px;
+    }
+    .food_text02_img{
+      transform: translate(100px,120px);
+    }
+    .food_br{
+      display: none;
+    }
+    h2{
+      color: #e0e7c8;
+      font-size: 1.4rem;
+      line-height: 1.1;
+    }
+    p{
+      color: #e0e7c8;
+    }
+  }
+  .food_text02 hgroup h2{
+    background-color: transparent;
+    max-width: 600px;
+    text-shadow: 0px 2px 3px #808080;
+  }
+  .food_text02 hgroup p{
+    transform: translate(-40px,-20px);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .food_text01 {
+    hgroup {
+      transform: translate(5%,-15px);
+      p{
+        font-size: 0.8rem;
+      }
+    }
+    img {
+      transform: translateX(0%);
+    }
+  }
+  .food_text02 {
+    hgroup {
+      transform: translate(-185px, -20px);
+      p {
+        transform: translate(10px,-20px);
+        font-size: 0.8rem;
+      }
+      h2 {
+        transform: translateX(-5px);
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+  .food{
+    transform: translateY(-150px);
+  }
+}
+
+// リンクok紹介
+
+@media screen and (max-width: 961px) {
+  .bunner{
+    transform: translateY(-40px);
+  }
+  .link_menu {
+    a {
+      padding: 12px 50px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .link_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    transform: translateX(10%);
+  }
+}
+
+// コラボレーション紹介
+
+//スワイパ―に記載
+
+//バナーゾーン
+
+@media screen and (max-width: 961px) {
+  .bunner{
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    
+    p{
+      text-align: center;
+    }
+  }
+  .bunner img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bunner {
+    transform: translate(0,-180px);
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}

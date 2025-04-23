@@ -1,0 +1,355 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+// FV 店名
+.swiper-container {
+  margin-bottom: 250px;
+}
+
+.swiper-container{
+  position: relative;
+  top: 190px;
+}
+
+.swiper-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4.6rem;
+  z-index: 3;
+  text-shadow: 1px 2px 3px #808080;
+  background-color: rgba(219, 112, 147, 0.3);
+  padding: 10px 40px;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+//ニュース
+.news-title {
+  font-size: 1.4rem;
+  color: sys.$font_color1;
+  transform: translateY(-4px);
+}
+
+.news-text {
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+  a {
+    font-size: 1.1rem;
+    color: sys.$font_color1;
+    transition: all 0.5s ease-out;
+  }
+  br {
+    display: none;
+  }
+}
+
+.news {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+//トピックス
+// 新商品
+
+.pararalx1 {
+  height: 250px;
+  max-width: 55%;
+  transition: all 0.5;
+}
+
+.topic_01_text {
+  transform: translate(57%, -150%);
+  transition: all 0.5;
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    text-shadow: 1px 2px 3px #808080;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+  }
+  p {
+    font-size: 1.2rem;
+    background-color: #1e1919;
+    font-weight: 600;
+    display: inline-block;
+    padding: 7px 15%;
+    transform: translateX(calc(45% - 167px));
+    transition: all 0.5s;
+
+    a {
+      color: sys.$font_color3;
+    }
+  }
+}
+
+.topic_01 {
+  margin-bottom: 7%;
+}
+
+// 猫とイチゴとチョコレート
+.topic_02 > p {
+  font-size: 1.2rem;
+  text-shadow: 1px 2px 3px #808080;
+  transform: translate(5%, -70px);
+  transition: all 0.5s;
+}
+
+.topic_02_text {
+  transform: translate(3%, -85%);
+  h2 {
+    @include com.font01;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+  }
+  p {
+    @include com.font02;
+    padding: 7px 13%;
+    transform: translateX(calc(25% - 110px));
+    transition: all 0.5s;
+    a {
+      color: sys.$font_color3;
+    }
+  }
+}
+
+.pararalx2 {
+  height: 250px;
+  max-width: 60%;
+  transform: translate(66%, -100%);
+  transition: all 0.5;
+}
+
+// トピックス3つ目
+.pararalx3 {
+  height: 300px;
+  position: relative;
+  bottom: 210px;
+  transition: all 0.5;
+}
+
+//CAMPAIGN
+.cakes {
+  hgroup {
+    background-color: rgb(255, 210, 230);
+    width: 1000px;
+    text-align: center;
+    position: absolute;
+    transform: translate(0px, -80%);
+    padding: 5% 0px;
+    transition: all 0.5;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-shadow: 1px 2px 3px #808080;
+    }
+    p {
+      text-align: left;
+      line-height: 2;
+      font-weight: 600;
+      transform: translateX(10%);
+      transition: all 0.5;
+    }
+  }
+}
+
+.pararalx4 {
+  height: 740px;
+  margin-bottom: 10px;
+}
+
+.main_cake {
+  transform: translateX(5%);
+  margin-bottom: 60px;
+  dt {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: all 0.5;
+  }
+  dd {
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
+
+// ニューヨークチーズケーキ
+
+.food_text01 {
+  img {
+    max-width: 700px;
+    object-fit: cover;
+    max-height: 600px;
+    transition: all 0.5;
+  }
+  hgroup {
+    color: sys.$font_color3;
+    transition: all 0.5;
+    h2 {
+      font-weight: 800;
+      font-size: 1.8rem;
+      font-family: "MS Gothic";
+      margin-bottom: 20px;
+      transition: all 0.5;
+    }
+  }
+}
+
+.food_text01 {
+  transform: translateX(-7%);
+  display: flex;
+  column-gap: 60px;
+  background-color: #373636;
+  max-width: 800px;
+  margin: 0 auto 170px;
+  max-height: 100px;
+  padding: 40px 30px 250px 30px;
+  transition: all 0.5;
+}
+
+// さっくり米粉パンケーキ
+.food_text02 {
+  img {
+    object-fit: cover;
+    max-height: 350px;
+    width: 750px;
+    transition: all 0.5;
+  }
+  hgroup {
+    transition: all 0.5;
+    h2 {
+      font-weight: 800;
+      font-size: 1.6rem;
+      font-family: "MS Gothic";
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.food_text02 {
+  display: flex;
+  column-gap: 30px;
+  background-color: #373636;
+  max-height: 230px;
+  max-width: 910px;
+  transform: translateX(9%);
+  padding: 50px 0 30px 0;
+  hgroup {
+    color: sys.$font_color3;
+    transform: translate(-135px, -30px);
+
+    p {
+      transform: translateX(60px);
+      line-height: 1.5;
+    }
+    h2 {
+      background-color: rgba(128, 128, 128, 0.3);
+      padding: 10px 20px;
+      transform: translateX(-55px);
+      border-radius: 20px;
+      text-shadow: 1px 2px 3px #808080;
+    }
+  }
+  img {
+    transform: translateX(-75px);
+  }
+}
+
+.food {
+  margin-bottom: 150px;
+}
+
+// コラボレーション紹介
+
+.colabo {
+  max-width: 300px;
+  h2 {
+    @include com.font03;
+  }
+  img {
+    max-width: 300px;
+  }
+
+  .corbo_text {
+    text-align: center;
+    background-color: sys.$font_color3;
+    transform: translateY(-5px);
+    padding-bottom: 5px;
+  }
+  .corbo_text p {
+    white-space: normal;
+    max-width: 285px;
+    color: sys.$font_color1;
+  }
+  .corbo_text p:nth-child(1) {
+    margin-bottom: 40px;
+    transform: translateY(10px);
+    text-decoration: underline;
+  }
+  .corbo_text p:nth-child(2) {
+    text-align: right;
+  }
+}
+
+// バナーゾーン
+
+.bunner {
+  max-width: fit-content;
+  display: grid;
+  gap: 30px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  margin-bottom: 40px;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.bunner img {
+  transition: all 0.5s;
+  border-radius: 0px;
+}
+
+// ふわっと表示させる用
+.fade01 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s, transform 1s;
+}
+
+.fade01.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+//ページトップに戻る
+.pagetop {
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #00a6c4;
+  background: #fff;
+  z-index: 10;
+
+  /*   デフォルトは非表示 */
+  opacity: 0;
+}
+.pagetop:hover {
+  box-shadow: 0 0 10px #00a6c4;
+}

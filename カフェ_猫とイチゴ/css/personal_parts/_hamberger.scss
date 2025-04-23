@@ -1,0 +1,114 @@
+@use "../foundation/system" as sys;
+
+.sp-nav a {
+  color: sys.$font_color1;
+  font-size: 1.1rem;
+}
+
+.sp-nav li{
+  line-height: 2.5rem;
+  padding-left: 10px;
+}
+
+
+
+/* 
+hamburger(ハンバーガーアイコン)
+=================================== */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.hamburger__line {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  right: 0;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.hamburger__line--1 {
+  top: 0px;
+}
+
+.hamburger__line--2 {
+  top: 11px;
+}
+
+.hamburger__line--3 {
+  top: 23px;
+}
+
+/*ハンバーガーがクリックされたら*/
+.open .hamburger__line--1 {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.open .hamburger__line--2 {
+  opacity: 0;
+}
+
+.open .hamburger__line--3 {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+/* 
+クリック前のハンバーガーメニューの状態
+=================================== */
+.sp-nav {
+  position: fixed;
+  right: -100%; /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+  top: 0;
+  width: 70%; /* 出てくるスライドメニューの幅 */
+  height: 100vh;
+  background-color: #fff;
+  transition: all 0.5s;
+  z-index: 200;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+}
+
+/*ハンバーガーがクリックされたら右からスライド後の位置*/
+.open .sp-nav {
+  right: 0;
+}
+
+/* 
+black-bg(ハンバーガーメニューの背景　非表示状態)
+=================================== */
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/*ハンバーガーメニューの背景　表示状態*/
+.open .black-bg {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+// ハンバーガーメニューのレスポンシブ
+
+.nav-wrapper {
+  display: none;
+  transition: all 0.5s;
+  opacity: 0;
+}

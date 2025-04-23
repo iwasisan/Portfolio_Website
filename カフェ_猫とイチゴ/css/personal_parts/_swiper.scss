@@ -1,0 +1,148 @@
+// スワイパ―の画像部分
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.swiper-slide img {
+  height: 700px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 880px;
+  transition: all 0.5s;
+  aspect-ratio: 16 / 9;
+}
+
+//プログレスバー
+
+.bar {
+  position: relative;
+  top: 130px;
+  left: 70px;
+  transform: translateX(calc(100% - 580px));
+  width: 200px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 10px auto 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.bar span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(3, 17, 78);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition-timing-function: linear;
+}
+
+@media screen and (max-width: 960px) {
+  .bar {
+    display: none;
+  }
+}
+
+// コラボレーション紹介スワイパ―
+
+.swiper {
+  /*スライダーの幅と高さを調整*/
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.swiper-slide {
+  /*スライド要素の幅と高さを調整*/
+  height: 350px;
+
+  /*テキストの位置調整*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*テキストの色と太さを指定*/
+  color: #000000;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.slide1 {
+  background-color: #ffe9f8;
+  border: solid 1px;
+  padding: 3px;
+}
+
+.corbo_text img {
+  max-height: 200px;
+  object-fit: cover;
+  transform: translateY(-20px);
+}
+
+.corbo_text p {
+  text-align: center;
+}
+
+.corbo_text p:nth-child(1) {
+  transform: translateY(-15px);
+  text-decoration: underline;
+}
+
+.corbo_text p:nth-child(2) {
+  text-align: right;
+  transform: translateX(-20px);
+}
+
+.corbo_text img {
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.swiper-button-next:after{
+  display: none;
+}
+.swiper-button-prev:after{
+  display: none;
+}
+
+
+//レスポンシブ
+@media screen and (max-width: 961px) {
+  .swiper{
+    transform: translateY(-60px);
+  }
+  .corbo_text p:nth-child(1) {
+    text-align: left;
+  }
+  .corbo_text p:nth-child(2) {
+    text-align: center;
+  }
+  .corbo_text div{
+    transform: translateY(-20px);
+  }
+  .corbo_text div p:nth-child(2){
+    transform: translateY(30px);
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .corbo_text img {
+    aspect-ratio: 16 / 9;
+  }
+  .slide1{
+    min-width: fit-content;
+  }
+  .swiper{
+    transform: translateY(-140px);
+  }
+}

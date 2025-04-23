@@ -1,0 +1,150 @@
+@use "../foundation/system" as sys;
+@use "../object/common" as com;
+
+body{
+  position: relative;
+}
+
+footer{
+    height:0px;
+    position:absolute;
+    bottom:-10px;
+}
+
+.footer_link_list h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+
+  a{
+    color: rgb(41, 41, 41);
+  }
+}
+
+.footer_link_list ul {
+  line-height: 1.5;
+  a{
+    color: rgb(41, 41, 41);
+  }
+}
+
+.footer_link nav {
+  display: flex;
+}
+
+.footer_link_list {
+  margin-right: 45px;
+}
+
+.footer_link {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: calc(10% + 10px);
+  margin-bottom: 80px;
+}
+
+.footer_con {
+  background-color: rgb(117, 137, 130);
+  display: inline-block;
+  border-radius: 10px;
+
+  a {
+    color: sys.$font_color1;
+    font-weight: 600;
+    padding: 10px 80px;
+    display: inline-block;
+  }
+}
+
+.footer_con_oya {
+  text-align: right;
+  transform: translate(-40px, -40px);
+  margin-bottom: 30px;
+}
+
+.footer_copy {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+//フッターレスポンシブ
+
+@media screen and (max-width: 961px) {
+  .footer_link {
+    max-width: 700px;
+    flex-flow: column;
+    gap: 50px;
+    margin: 0 auto;
+    transform: translateX(10%);
+  }
+  .footer_link_list {
+    margin-right: 70px;
+  }
+  .footer_link_list {
+    h4 {
+      a {
+        font-size: 1.2rem;
+      }
+    }
+    li {
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .footer_con{
+    transform: translateX(70px);
+
+    a{
+      padding: 5px 60px;
+      font-size: 1rem;
+    }
+  }
+  .footer_copy{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .footer_link nav:nth-child(2) {
+    display: flex;
+    row-gap: 30px;
+  }
+  .footer_copy{
+    font-size: 0.7rem;
+  }
+  .footer_link_list {
+    margin-right: 30px;
+    transform: translateY(-200px);
+  }
+  .footer_link_list {
+    h4 {
+      a {
+        font-size: 0.9rem;
+      }
+    }
+    li {
+      a {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .footer_con{
+    transform: translate(80px,-190px);
+
+    a{
+      padding: 5px 45px;
+      font-size: 0.8rem;
+    }
+  }
+  .footer_copy{
+    transform: translate(50px,-200px);
+  }
+  footer{
+    height:100px;
+    position:absolute;
+    bottom:0px;
+    transform: translateY(150px);
+  }
+}
+
