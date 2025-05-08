@@ -1,0 +1,86 @@
+// ハンバーガーメニューの位置
+.hamburger {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: none; //これ付けないと枠線つきます
+  background: transparent;
+  cursor: pointer;
+}
+
+// メニューのラインスタイル
+.hamburger__line {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 1px;
+  background-color: #043d2a;
+  transition: all .4s;
+}
+
+// 3本ラインの位置　水平状態
+.hamburger__line:nth-of-type(1) {
+  top: 14px;
+}
+.hamburger__line:nth-of-type(2) {
+  top: 23px;
+}
+.hamburger__line:nth-of-type(3) {
+  top: 32px;
+}
+
+/* メニューオープン時のライン　ぺけまーく */
+.hamburger.active .hamburger__line:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+.hamburger.active .hamburger__line:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger.active .hamburger__line:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+// オープンしたメニューのスタイル
+// transform: translateX(-100%);　初期位置は左
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #b8b1b1;
+  box-shadow: 2px 0 4px rgba(0,0,0,.1);
+  transform: translateX(-100%);
+  transition: transform .4s;
+  z-index: 90;
+}
+
+// オープン時の位置　この位置の違いがアニメーションになる
+.nav.active {
+  transform: translateX(0);
+}
+
+// リスト全体の横方向の位置
+.nav__list {
+  margin: 0;
+  padding: 100px 0 0;
+  list-style: none;
+}
+
+// 一つ一つの要素の縦の幅
+.nav__item {
+  padding: 0 20px;
+}
+
+// メニュー要素の文字色、下線のスタイル、文字と下線の間のスペース幅
+.nav__link {
+  display: block;
+  padding: 15px 0;
+  color: #1f1d1d;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+

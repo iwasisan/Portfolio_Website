@@ -1,0 +1,35 @@
+// ブラウザサイズ
+
+$browser-size-pc: 1200px;
+$browser-size-tab: 768px;
+$browser-size-sp: 375px;
+
+
+// PC
+body{
+  max-width: $browser-size-pc;
+  width: 100%;
+  background-color: #c7c3c3;
+  margin: 0 auto;
+}
+
+// 1200px以上はこれ
+@media screen and (min-width:$browser-size-pc){
+  body{
+    max-width: $browser-size-pc;
+  }
+}
+
+// tab　1200px～768pxはコレ
+@media screen and (min-width:$browser-size-sp) and (max-width:$browser-size-tab){
+  body{
+    max-width: $browser-size-tab;
+  }
+}
+
+// sp　375px以下はこれ
+@media screen and (max-width:$browser-size-sp){
+  body{
+    max-width: $browser-size-sp;
+  }
+}

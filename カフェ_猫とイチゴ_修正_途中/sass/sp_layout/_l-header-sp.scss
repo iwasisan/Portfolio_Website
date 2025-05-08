@@ -1,0 +1,34 @@
+@use "../setting/font" as font;
+@use "../setting/space" as space;
+@use "../../sass/foundation/base" as *;
+
+
+// tab表示でのヘッダー
+// 文字を小さくし、はみ出し部分は横スクロールで選択できるよーにする
+// ナビのメニューは下揃え
+@media screen and (min-width:$browser-size-sp) and (max-width:$browser-size-tab){
+  .header_c-link-group{
+    overflow-x: scroll;
+    align-items: flex-end;
+  }
+  .header_c-link{
+    p{
+      font-size: font.$font-size-sp;
+    }
+  }
+}
+
+
+// sp表示でのヘッダー
+// ハンバーガーメニューに切り換え
+@media screen and (max-width:$browser-size-sp){
+  header{
+    margin-bottom: space.$Highlarge-margin;
+  }
+  .header_c-link-group{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+}

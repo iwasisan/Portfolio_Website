@@ -1,0 +1,32 @@
+// setting
+@use '../sass/setting/color';
+@use '../sass/setting/font';
+@use '../sass/setting/space';
+
+// foundation
+@use '../sass/foundation/reset';
+@use '../sass/foundation/base';
+
+// layout
+@use '../sass/layout/l-header';
+@use '../sass/layout/l-footer';
+@use '../sass/layout/main';
+
+//object
+// component
+@use '../sass/object/component/c-button';
+@use '../sass/object/component/c-slide';
+@use '../sass/object/component/c-text';
+
+// project
+@use '../sass/object/project/p-navigation';
+@use '../sass/object/project/p-slider';
+
+// utility
+@use '../sass/object/utility/p-hamburger';
+
+
+// sp_layout
+@use '../sass/sp_layout/l-header-sp';
+@use '../sass/sp_layout/l-footer-sp';
+@use '../sass/sp_layout/l-main-sp';

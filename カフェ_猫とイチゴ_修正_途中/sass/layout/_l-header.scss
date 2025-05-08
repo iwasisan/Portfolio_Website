@@ -1,0 +1,28 @@
+@use "../object/component/c-text" as c-tex;
+@use "../setting/space" as space;
+@use "../object/project/p-navigation" as p-navigation;
+@use "../object/utility/p-hamburger" as p-hamburger;
+
+
+// PC表示でのヘッダー
+.header_c-link-group{
+  @include p-navigation.flex;
+  padding:space.$navi-padding; 
+}
+
+.header_c-link{
+  @include c-tex.navigation-img;
+  img{
+    width: 100%;
+  }
+  p{
+    @include c-tex.navigation-text;
+    white-space: nowrap;
+    transform: translateY(space.$small-margin2);
+  }
+}
+
+// PC表示でのハンバーガーメニューの様子
+.hamburger{
+  display: none;
+}

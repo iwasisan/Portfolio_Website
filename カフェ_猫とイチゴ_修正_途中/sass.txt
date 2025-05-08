@@ -1,0 +1,25 @@
+sp時どのようにするか
+
+setting
+/color.scss   文字や背景色、ボタンの色等のカラー
+/font.scss　h1 h2 h3 pタグ等のフォントファミリーやサイズ、影つけありなし
+
+object
+・component
+/button ボタンのスタイル　大きさやパディング
+/slide スライダーで流れる要素のスタイル（単位的にprojectよりかも）
+/text fontのマージンなど位置関係のスタイル
+
+・project
+/navigation ページトップのナビゲーション部分のスタイル
+/slider スライダーのスタイル
+
+layout
+main 各セクションのスタイル
+
+sp-layout
+sp時のスタイル
+
+・foundation
+reset
+base

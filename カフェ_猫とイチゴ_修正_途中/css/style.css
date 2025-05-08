@@ -1,0 +1,224 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  text-align: left;
+  zoom: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+input[type=button], input[type=text], input[type=submit] {
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+  border-radius: 0;
+}
+
+th, td {
+  border-collapse: collapse;
+}
+
+table th, table td {
+  white-space: nowrap;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: text-bottom;
+  vertical-align: -webkit-baseline-middle;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  background-color: #c7c3c3;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    max-width: 375px;
+  }
+}
+.hamburger {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger__line {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 1px;
+  background-color: #043d2a;
+  transition: all 0.4s;
+}
+
+.hamburger__line:nth-of-type(1) {
+  top: 14px;
+}
+
+.hamburger__line:nth-of-type(2) {
+  top: 23px;
+}
+
+.hamburger__line:nth-of-type(3) {
+  top: 32px;
+}
+
+/* メニューオープン時のライン　ぺけまーく */
+.hamburger.active .hamburger__line:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+
+.hamburger.active .hamburger__line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger__line:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #b8b1b1;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+  z-index: 90;
+}
+
+.nav.active {
+  transform: translateX(0);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 100px 0 0;
+  list-style: none;
+}
+
+.nav__item {
+  padding: 0 20px;
+}
+
+.nav__link {
+  display: block;
+  padding: 15px 0;
+  color: #1f1d1d;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.header_c-link-group {
+  display: flex;
+  justify-content: space-evenly;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  padding: 0px 5%;
+}
+
+.header_c-link {
+  width: 15%;
+  max-width: 80px;
+}
+.header_c-link img {
+  width: 100%;
+}
+.header_c-link p {
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-5px);
+}
+.header_c-link p:hover {
+  opacity: 0.5;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  .header_c-link-group {
+    overflow-x: scroll;
+    align-items: flex-end;
+  }
+  .header_c-link p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    margin-bottom: 70px;
+  }
+  .header_c-link-group {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

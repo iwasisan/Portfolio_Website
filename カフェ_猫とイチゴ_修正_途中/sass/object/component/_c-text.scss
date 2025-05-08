@@ -1,0 +1,19 @@
+// パーツ単位の大きさ等
+@use "../../setting/color" as color;
+@use "../../setting/font" as font;
+@use "../../setting/space" as space;
+
+
+@mixin navigation-text{
+  font-size: font.$font-size-p;
+    text-align: center;
+        &:hover{
+            opacity: 0.5;
+        }
+}
+
+
+@mixin navigation-img{
+  width: 15%;
+  max-width:80px;
+}

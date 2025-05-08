@@ -1,0 +1,10 @@
+// flex等レイアウト的なもの
+@use "../component/c-button" as c-but;
+@use "../component/c-text" as c-tex;
+@use "../../setting/space" as space;
+
+@mixin flex{
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: space.$navigation-margin;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- スライダー -->
+  <!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  /> -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- カード型リンク -->
+  <header>
+    <div class="header_c-link-group">
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/goods.png" alt="商品情報">
+            <p>商品情報</p>
+          </a>
+        </div>
+      </div>
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/service.png" alt="サービス">
+            <p>サービス</p>
+          </a>
+        </div>
+      </div>
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/recruit.png" alt="採用情報">
+            <p>採用情報</p>
+          </a>
+        </div>
+      </div>
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/company.png" alt="会社情報">
+            <p>会社情報</p>
+          </a>
+        </div>
+      </div>
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/shop.png" alt="店舗情報">
+            <p>店舗情報</p>
+          </a>
+        </div>
+      </div>
+      <div class="header_c-link">
+        <div>
+          <a href="#">
+            <img src="img/navi/contact.png" alt="お問い合わせ">
+            <p>お問い合わせ</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- sp時ハンバーガーメニュー -->
+    <!-- spanがハンバーガーメニューのライン -->
+    <!-- 「aria-expanded」と「aria-controls」は開閉パネル等に用いる -->
+    <button class="hamburger" aria-label="メニュー" aria-controls="nav-menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+    <!--aria-hidden="true"は display: none;と同じ -->
+    <nav id="nav-menu" class="nav" aria-hidden="true">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#" class="nav__link">ホーム</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">about</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">サービス</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <!-- KV　スワイパーでスライドショー　プログレスバー　商品説明はフェードイン -->
+    <section class="swiper-area-head kv-l">
+      <div class="swiper-container kv-container">
+        <nav class="kv-text">
+          <!-- KVタイトル -->
+          <h1>猫とイチゴとチョコレート</h1>
+        </nav>
+        <div class="swiper-wrapper kv-wrapper">
+          <!-- KV Slides img -->
+          <div class="swiper-slide kv-slide"><p>商品説明xxxxxxxxxxxxx</p></div>
+          <div class="swiper-slide kv-slide"><p>商品説明xxxxxxxxxxxxx</p></div>
+          <div class="swiper-slide kv-slide"><p>商品説明xxxxxxxxxxxxx</p></div>
+          <div class="swiper-slide kv-slide"><p>商品説明xxxxxxxxxxxxx</p></div>
+          <div class="swiper-slide kv-slide"><p>商品説明xxxxxxxxxxxxx</p></div>
+        </div>
+      </div>
+      <div class="progressbar"><span class="progressbar_in"></span></div>
+    </section>
+
+    <!-- 新商品・店舗情報 パララックス　GSAP-->
+    <section class="service-link-group">
+      <div class="container service-c-container">
+        <div class="parallax-img js-trigger">
+          <img src="img/topic_1.jpg" alt="新商品ストロベリーデニッシュパルフェ" />
+        </div>
+        <div class="service-c-text">
+          <h2>新商品ストロベリーデニッシュパルフェ</h2>
+          <p><a href="#">商品一覧へ</a></p>
+        </div>
+      </div>
+      <div class="container service-c-container2">
+        <div class="service-c-text">
+          <hgroup>
+            <p>猫と楽しめる新感覚カフェ</p>
+            <h2>猫とイチゴとチョコレート</h2>
+          </hgroup>
+          <p><a href="#">詳細はこちら</a></p>
+        </div>
+        <div class="parallax-img js-trigger">
+          <img src="img/topic_2.jpg" alt="猫とイチゴとチョコレート詳細はこちら" />
+        </div>
+      </div>
+      <div class="bg-center service-image">
+        <div class="parallax-img js-trigger">
+          <img src="img/topic_3.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- お勧め商品紹介 パララックス-->
+    <section class="product">
+      <div class="product-title">
+        <hgroup>
+          <h2>CAMPAIGN</h2>
+          <p>
+            いよいよ夏本番！ひんやり爽やかなフルーツを使ったフローズンドリンクが登場です。 『メロンヨーグルトスワークル』は、北海道産メロンを使用した豊潤な甘みのメロンフローズンとヨーグルトが溶け合います。ストローでかき混ぜながらお召し上がりいただき、味わいの変化を楽しみましょう。
+          </p>
+        </hgroup>
+      </div>
+      <div class="bg-center product-image">
+        <div class="parallax-img js-trigger">
+          <img src="img/campaign.jpg" alt="" />
+        </div>
+      </div>
+      <div class="product-text">
+        <hgroup>
+          <h3>ストロベリーフロマージュ・オ・トロピカルセット</h3>
+          <p>
+            パッションフルーツとオレンジのジューシーな味わいが広がる、見た目も可愛らしいケーキです。フルーティな風味の中に、レモンピールのほどよい苦みとチーズソースのまろやかな酸味が絶妙なバランス。チョコで固めたクランブル生地のサクッとした食感もお楽しみください。
+          </p>
+        </hgroup>
+      </div>
+    </section>
+
+    <!-- 商品　背景をずらすレイアウト -->
+    <section class="items">
+      <div class="items-c-list01">
+        <hgroup class="items-title">
+          <h3>ニューヨークチーズケーキ</h3>
+          <p>
+            なめらかな口あたりで、クリーミーでコクのある味わいです。
+          </p>
+        </hgroup>
+        <div>
+          <img src="img/item01.jpg" alt="ニューヨークチーズケーキ">
+        </div>
+      </div>
+      <div class="items-c-list02">
+        <div>
+          <img src="img/item02.jpg" alt="さっくり米粉パンケーキバターホイップクリーム&メープル">
+        </div>
+        <hgroup class="items-title">
+          <h3>さっくり米粉パンケーキバターホイップクリーム&メープル</h3>
+          <p>
+            米粉と小麦を合わせ、さくっとした食感ともちっとした口あたりが楽しめます。
+          </p>
+        </hgroup>
+      </div>
+    </section>
+
+    <!-- 店舗リンク　スライダー 複数のリンクがあるカード＋スワイパーによるスライダー-->
+    <section class="shop">
+      <div class="swiper shop-swiper">
+        <div class="swiper-wrapper shop-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide shop-swiper-slide">
+            <div class="columnItem">
+              <div class="columnItem__link">
+                <a href=""></a>
+                <div class="columnItem__img">
+                  <img src="img/slide/slide_item01.jpg" alt="">
+                  <button class="clip-btn"></button>
+                </div>
+                <p class="columnItem__title">
+                  「新宿三丁目店」4月12日グランドオープン
+                </p>
+              </div>
+              <div class="columnItem__tags">
+                <p>2010/2/11</p>
+                <a href="">#駅ナカ</a>
+                <a href="">#新店舗</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide shop-swiper-slide">
+            <div class="columnItem">
+              <div class="columnItem__link">
+                <a href=""></a>
+                <div class="columnItem__img">
+                  <img src="img/slide/slide_item02.jpeg" alt="">
+                  <button class="clip-btn"></button>
+                </div>
+                <p class="columnItem__title">
+                  「新宿三丁目店」4月12日グランドオープン
+                </p>
+              </div>
+              <div class="columnItem__tags">
+                <p>2010/2/11</p>
+                <a href="">#駅ナカ</a>
+                <a href="">#新店舗</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide shop-swiper-slide">
+            <div class="columnItem">
+              <div class="columnItem__link">
+                <a href=""></a>
+                <div class="columnItem__img">
+                  <img src="img/slide/slide_item03.jpeg" alt="">
+                  <button class="clip-btn"></button>
+                </div>
+                <p class="columnItem__title">
+                  「新宿三丁目店」4月12日グランドオープン
+                </p>
+              </div>
+              <div class="columnItem__tags">
+                <p>2010/2/11</p>
+                <a href="">#駅ナカ</a>
+                <a href="">#新店舗</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide shop-swiper-slide">
+            <div class="columnItem">
+              <div class="columnItem__link">
+                <a href=""></a>
+                <div class="columnItem__img">
+                  <img src="img/slide/slide_item04.webp" alt="">
+                  <button class="clip-btn"></button>
+                </div>
+                <p class="columnItem__title">
+                  「新宿三丁目店」4月12日グランドオープン
+                </p>
+              </div>
+              <div class="columnItem__tags">
+                <p>2010/2/11</p>
+                <a href="">#駅ナカ</a>
+                <a href="">#新店舗</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide shop-swiper-slide">
+            <div class="columnItem">
+              <div class="columnItem__link">
+                <a href=""></a>
+                <div class="columnItem__img">
+                  <img src="img/slide/slide_item05.jpg" alt="">
+                  <button class="clip-btn"></button>
+                </div>
+                <p class="columnItem__title">
+                  「新宿三丁目店」4月12日グランドオープン
+                </p>
+              </div>
+              <div class="columnItem__tags">
+                <p>2010/2/11</p>
+                <a href="">#駅ナカ</a>
+                <a href="">#新店舗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- バナー -->
+    <section class="bunner-link-group">
+      <div>
+        <p class="bunner-link">
+          <a href=""><img src="img/bunner/bunner01.png" alt=""></a>
+        </p>
+        <p class="bunner-link">
+          <a href=""><img src="img/bunner/bunner02.png" alt=""></a>
+        </p>
+        <p class="bunner-link">
+          <a href=""><img src="img/bunner/bunner03.png" alt=""></a>
+        </p>
+        <p class="bunner-link">
+          <a href=""><img src="img/bunner/bunner04.png" alt=""></a>
+        </p>
+      </div>
+    </section>
+
+    <!--ドロップダウンメニューリンク  -->
+    <footer>
+      <div class="footer-link-group">
+        <ul class="footer-link">
+          <li>
+            商品情報
+            <ul class="footer-link-sub">
+              <li><a href="#">menu2-1</a></li>
+              <li><a href="#">menu2-2</a></li>
+            </ul>
+          </li>
+          <li>
+            サービス
+            <ul class="footer-link-sub">
+              <li><a href="#">menu3-1</a></li>
+              <li><a href="#">menu3-2</a></li>
+              <li><a href="#">menu3-3</a></li>
+            </ul>
+          </li>
+          <li>
+            採用情報
+            <ul class="footer-link-sub">
+              <li><a href="#">menu2-1</a></li>
+              <li><a href="#">menu2-2</a></li>
+            </ul>
+          </li>
+          <li>
+            会社情報
+            <ul class="footer-link-sub">
+              <li><a href="#">menu2-1</a></li>
+              <li><a href="#">menu2-2</a></li>
+            </ul>
+          </li>
+          <li>
+            店舗情報
+            <ul class="footer-link-sub">
+              <li><a href="#">menu2-1</a></li>
+              <li><a href="#">menu2-2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-text">
+        <p>猫とイチゴとチョコレート(本国HP) | ©猫とイチゴとチョコレートJAPAN2019</p>
+      </div>
+    </footer>
+  </main>
+  
+  <!-- スライダー -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <script src="./js/hamburger.js"></script>
+</body>
+</html>
